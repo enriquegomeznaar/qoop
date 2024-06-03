@@ -1,42 +1,88 @@
+/* Asegúrate de que el body y html ocupen todo el espacio y no tengan márgenes ni padding */
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Evita cualquier desplazamiento no deseado */
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  height: 100%;
+  width: 100%;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10; /* Asegura que el header esté encima del fondo */
+  box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total del elemento */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.header div:first-child {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.header ul li {
+  display: inline;
+}
+
+.header ul li a {
+  font-weight: bold;
+  color: black; /* Color del texto */
+  padding: 1rem;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 180%;
+  text-transform: uppercase;
+}
+
+.header ul li a:hover {
+  transition: white .2s ease-out;
+}
+
+/* Media query para dispositivos pequeños */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header div:first-child {
+    width: 80%;
+    text-align: center;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .header ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .header ul li {
+    display: inline-block;
+    margin: 0;
+  }
 
-.read-the-docs {
-  color: #888;
+  .header ul li a {
+    display: block;
+  }
 }
