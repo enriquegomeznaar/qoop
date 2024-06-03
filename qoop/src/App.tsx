@@ -4,6 +4,7 @@ import { OrbitControls, Html } from "@react-three/drei";
 import * as THREE from "three";
 import Header from "./components/Header";
 import "./App.css"; 
+import Footer from "./components/Footer";
 
 // Create a deformed cube
 const DeformedCube = () => {
@@ -122,6 +123,7 @@ const Scene = () => {
       <Background />
       <Html fullscreen>
         <Header />
+        <Footer />
       </Html>
     </>
   );
@@ -133,7 +135,6 @@ const App = () => {
       <Canvas style={{ height: "100%", width: "100%" }}>
         <Scene />
       </Canvas>
-      <h1>hola</h1>
     </div>
   );
 };

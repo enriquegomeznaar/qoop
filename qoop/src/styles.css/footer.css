@@ -1,0 +1,116 @@
+/* Footer.css */
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-left: 1rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-weight: 400;
+    color: black;
+    border-bottom: 1px solid black;
+    /* Añadir borde inferior */
+    padding-bottom: 2px;
+    /* Añadir padding inferior */
+}
+
+.footer-links a:hover {
+    color: #007bff;
+    border-bottom-color: #007bff;
+    /* Cambiar color del borde inferior al pasar el ratón */
+}
+
+.footer-text {
+    text-align: center;
+}
+
+.footer-text .legal-link {
+    text-decoration: underline;
+    /* Subrayar texto */
+    color: black;
+    /* Cambiar el color del texto a negro */
+}
+
+.footer-text .legal-link:hover {
+    color: #007bff;
+    text-decoration: underline;
+    /* Mantener subrayado al pasar el ratón */
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+
+}
+
+@media (max-width: 1280px) {
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-links {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .footer-left {
+        width: 60vh;
+        margin-bottom: 3rem;
+    }
+
+    .footer-left h1 {
+        margin-bottom: 5px;
+        margin-left: 1rem;
+    }
+
+    .footer-text p {
+        text-align: right;
+        margin-left: 3.1rem;
+    }
+}
+
+/* Media query para dispositivos pequeños */
+@media (max-width: 600px) {
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .footer-text p {
+        text-align: left;
+        margin-left: 3.1rem;
+
+    }
+
+    .footer-left h1 {
+        letter-spacing: 3px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 3rem;
+    }
+
+}
