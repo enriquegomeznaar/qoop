@@ -1,7 +1,7 @@
 /* Asegúrate de que el body y html ocupen todo el espacio y no tengan márgenes ni padding */
 body, html {
   height: 100%;
-  width: 100%;
+  width: 100;
   margin: 0;
   padding: 0;
   overflow: hidden;
