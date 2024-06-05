@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
-import '../styles.css/player.css'
+import '../styles.css/player.css';
 
 const songs = [
   {
@@ -28,24 +28,23 @@ export const Player = () => {
     console.log('Next button clicked');
     setCurrentSongIndex((prevIndex) => (prevIndex + 1) % songs.length);
   };
-  
+
   const handleClickPrevious = () => {
     console.log('Previous button clicked');
     setCurrentSongIndex((prevIndex) => (prevIndex - 1 + songs.length) % songs.length);
   };
+
   return (
-    
-    <div style={{ display: "flex", justifyContent: "center", padding: "10px" }}>
+    <div className="audio-player-container">
       <AudioPlayer
         src={songs[currentSongIndex].url}
         onPlay={() => console.log(currentSongIndex)}
         layout="horizontal"
         showJumpControls={false}
         showSkipControls={true}
-        showFilledVolume={true}
+        showFilledVolume={false}
         customAdditionalControls={[]}
         customProgressBarSection={[]}
-   
         progressJumpStep={10}
         showFilledProgress={false}
         onEnded={handleClickNext}
@@ -55,4 +54,3 @@ export const Player = () => {
     </div>
   );
 };
-  

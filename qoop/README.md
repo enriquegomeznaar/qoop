@@ -1,30 +1,52 @@
-# React + TypeScript + Vite
+# TwistedCube Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React application that renders a 3D twisted cube using Three.js. The cube can change colors and rotation speed based on user preferences.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 3D Twisted Cube rendered using Three.js
+- Option to reduce motion for accessibility
+- Option to reduce color contrast for accessibility
+- Responsive design
 
-## Expanding the ESLint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Before you begin, ensure you have met the following requirements:
 
-- Configure the top-level `parserOptions` property like this:
+- You have installed [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) (Node Package Manager).
+- You have a basic understanding of JavaScript and React.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Installation
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/enriquegomeznaar/qoop.git
+
+Navigate to the project directory:
+
+bash
+
+cd qoop
+
+Install the dependencies:
+
+bash
+
+npm 
+
+Running the Project
+
+To run the project locally, follow these steps:
+
+    Start the development server:
+
+    bash
+
+    npm run dev
+
+    Open your browser and navigate to http://localhost:5173.
+
+You should see the 3D twisted cube rendered on the screen.
+
+Enjoy it!
