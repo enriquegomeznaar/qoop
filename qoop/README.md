@@ -1,51 +1,36 @@
-# TwistedCube Project
+TwistedCube Project
 
 This project is a React application that renders a 3D twisted cube using Three.js. The cube can change colors and rotation speed based on user preferences.
+Features
 
-## Features
+    3D Twisted Cube rendered using Three.js
+    Option to reduce motion for accessibility
+    Option to reduce color contrast for accessibility
+    Responsive design
+    Music playback using the react-h5-audio-player dependency
 
-- 3D Twisted Cube rendered using Three.js
-- Option to reduce motion for accessibility
-- Option to reduce color contrast for accessibility
-- Responsive design
-
-## Prerequisites
+Prerequisites
 
 Before you begin, ensure you have met the following requirements:
 
-- You have installed [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) (Node Package Manager).
-- You have a basic understanding of JavaScript and React.
+    You have installed Node.js and npm (Node Package Manager).
+    You have a basic understanding of JavaScript and React.
 
-## Installation
+Installation
 
-1. Clone the repository:
+    Clone the repository: git clone https://github.com/enriquegomeznaar/qoop.git
 
-   ```bash
-   git clone https://github.com/enriquegomeznaar/qoop.git
+    Navigate to the project directory: cd qoop
 
-Navigate to the project directory:
-
-bash
-
-cd qoop
-
-Install the dependencies:
-
-bash
-
-npm 
+    Install the dependencies: npm install
 
 Running the Project
 
 To run the project locally, follow these steps:
 
-    Start the development server:
+    Start the development server: npm run dev
 
-    bash
-
-    npm run dev
-
-    Open your browser and navigate to http://localhost:5173.
+    Open your browser and navigate to http://localhost:5173
 
 You should see the 3D twisted cube rendered on the screen.
 
