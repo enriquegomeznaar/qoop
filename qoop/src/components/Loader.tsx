@@ -21,7 +21,7 @@ const Loader: React.FC<{ onLoaded: () => void }> = ({ onLoaded }) => {
 
   return (
     <div className={`loader-container ${!isVisible ? 'hidden' : ''}`}>
-      <h1 className="loader-container-text">Block</h1>
+      <h1 className="loader-container-text">BLOCK</h1>
     </div>
   );
 };

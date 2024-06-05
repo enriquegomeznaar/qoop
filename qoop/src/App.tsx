@@ -9,6 +9,8 @@ import Loader from "./components/Loader";
 const App = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [reduceMotion, setReduceMotion] = useState(false);
+  const [reduceColor, setReduceColor] = useState(false);
 
   const handleToggleDialog = () => {
     setIsDialogOpen(!isDialogOpen);
@@ -18,14 +20,30 @@ const App = () => {
     setIsLoaded(true);
   };
 
+  const handleToggleReduceMotion = () => {
+    setReduceMotion(!reduceMotion);
+  };
+
+  const handleToggleReduceColor = () => {
+    setReduceColor(!reduceColor);
+  };
+
   return (
     <>
       {!isLoaded && <Loader onLoaded={handleLoaded} />}
       {isLoaded && (
         <div style={{ height: "100vh", width: "100vw" }}>
           <Header onToggleDialog={handleToggleDialog} />
-          <TwistedCube />
-          {isDialogOpen && <Dialog onClose={handleToggleDialog} />}
+          <TwistedCube reduceMotion={reduceMotion} reduceColor={reduceColor} />
+          {isDialogOpen && (
+            <Dialog
+              onClose={handleToggleDialog}
+              onToggleReduceMotion={handleToggleReduceMotion}
+              onToggleReduceColor={handleToggleReduceColor}
+              reduceMotion={reduceMotion}
+              reduceColor={reduceColor}
+            />
+          )}
           <Footer />
         </div>
       )}
@@ -35,9 +53,13 @@ const App = () => {
 
 interface DialogProps {
   onClose: () => void;
+  onToggleReduceMotion: () => void;
+  onToggleReduceColor: () => void;
+  reduceMotion: boolean;
+  reduceColor: boolean;
 }
 
-const Dialog: React.FC<DialogProps> = ({ onClose }) => {
+const Dialog: React.FC<DialogProps> = ({ onClose, onToggleReduceMotion, onToggleReduceColor, reduceMotion, reduceColor }) => {
   return (
     <div className="dialog-overlay" onClick={onClose}>
       <div className="dialog-content" onClick={(e) => e.stopPropagation()}>
@@ -49,13 +71,13 @@ const Dialog: React.FC<DialogProps> = ({ onClose }) => {
         <div className="dialog-checkbox">
           <label>
             <span>Reduce color</span>
-            <input type="checkbox" />
+            <input type="checkbox" checked={reduceColor} onChange={onToggleReduceColor} />
           </label>
         </div>
         <div className="dialog-checkbox">
           <label>
             <span>Reduce motion</span>
-            <input type="checkbox" />
+            <input type="checkbox" checked={reduceMotion} onChange={onToggleReduceMotion} />
           </label>
         </div>
       </div>

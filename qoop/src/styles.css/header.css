@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "pilatwide";
+  src: url(../assets/PilatWide-Bold.ttf);
+  font-weight: bold;
+  font-style: bold;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -29,19 +36,24 @@
   display: inline;
 }
 
+.header a[aria-label="Accessibility options"] {
+  margin-top: .4em;
+}
+
 .header ul li a {
   color: black;
-  padding: .2rem;
+  padding: .1em;
   margin-bottom: 5px;
   cursor: pointer;
+  font-family: pilatwide;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1.3em;
   font-style: normal;
   line-height: 180%;
   text-transform: uppercase;
   border-bottom: 1px solid black;
   text-decoration: none;
-  transition: .2s;
+  transition: .3s;
 
 }
 
@@ -169,7 +181,7 @@
 .header a[aria-label="Accessibility options"] {
   text-decoration: none;
   cursor: pointer;
-  transition: .2s;
+  transition: .3s;
 }
 
 .header a[aria-label="Accessibility options"]>svg {
@@ -184,6 +196,45 @@
 .header a[aria-label="Accessibility options"]:hover>svg {
   text-decoration: none;
 }
+
 .rhap_volume-controls button:last-child {
-  display: none; /* This hides the dot/button on the right */
+  display: none;
+  /* This hides the dot/button on the right */
+}
+
+body {
+  transition: background-color 1s;
+}
+
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog-content {
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.dialog-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.dialog-checkbox {
+  margin-bottom: 10px;
 }

@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-left">
-        <h1>BLOCK</h1>
+        <h1 className="title">BLOCK</h1>
         <div className="footer-links">
           <a
             href="https://squareup.com"

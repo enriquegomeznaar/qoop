@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "pilatwide";
+    src: url(../assets/PilatWide-Black.ttf);
+    font-weight: bold;
+    font-style: bold;
+  }
+
 .loader-container {
     background-color: white;
     display: flex;
@@ -8,19 +15,20 @@
     width: 100vw;
     height: 100vh;
     opacity: 1;
-    transition: opacity 0.5s ease-out; /* Smooth transition */
+    transition: opacity 1s ease-out; /* Smooth transition */
   }
   
   .loader-container.hidden {
     opacity: 0;
-    transition: opacity 0.5s ease-out; /* Ensure smooth transition */
+    transition: opacity 1s ease-out; /* Ensure smooth transition */
   }
   
   .loader-container-text {
     color: black;
-    font-size: 4em;
+    font-size: 3em;
     font-family: "Exo 2", sans-serif;
     margin: auto;
-    letter-spacing: 0.3em;
+    font-family: pilatwide;
+    font-weight: bold;
   }
   
