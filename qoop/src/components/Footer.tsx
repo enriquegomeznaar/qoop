@@ -40,7 +40,7 @@ const Footer = () => {
           © 2024 Block, Inc. BLOCK and the Block Logo are trademarks of Block,
           Inc.{" "}
           <a
-            href="https://legal.block.xyz"
+            href="https://block.xyz/legal"
             target="_blank"
             rel="noopener noreferrer"
             className="legal-link"

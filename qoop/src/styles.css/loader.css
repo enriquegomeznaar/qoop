@@ -1,43 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
-
-.loader-container{
+.loader-container {
     background-color: white;
     display: flex;
     justify-content: center;
-    align-content: center;
-    position: absolute;
+    align-items: center; /* align-content to align-items */
+    position: fixed; /* Change from absolute to fixed */
     z-index: 1000;
     width: 100vw;
     height: 100vh;
-    animation: opacityNull 1.5s ease-out;
+    opacity: 1;
+    transition: opacity 0.5s ease-out; /* Smooth transition */
+  }
+  
+  .loader-container.hidden {
     opacity: 0;
-    scale: 0;
-
-}
-
-.loader-container-text{
+    transition: opacity 0.5s ease-out; /* Ensure smooth transition */
+  }
+  
+  .loader-container-text {
     color: black;
-    font-size: 3em;
+    font-size: 4em;
     font-family: "Exo 2", sans-serif;
     margin: auto;
-    letter-spacing: .1em;
-}
-
-@keyframes opacityNull {
-    
-    0%{
-        opacity: 100%;
-        scale:1
-    }
-
-    50%{
-        opacity: 100%;
-        scale:1
-    }
-
-    100%{
-        opacity: 0%;
-        scale: 0;
-    }
-    
-}
+    letter-spacing: 0.3em;
+  }
+  

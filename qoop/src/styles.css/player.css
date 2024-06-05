@@ -1,0 +1,70 @@
+/* player.css */
+.rhap_container {
+    background-color: transparent !important;
+    border: 2px solid black;
+    border-radius: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .rhap_button-clear, .rhap_main-controls-button, .rhap_volume-button {
+    color: black !important;
+  }
+  
+  .rhap_progress-bar {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    width: 100% !important;
+  }
+  
+  .rhap_progress-filled {
+    background-color: black !important;
+  }
+  
+  /* Hide the dot on the right side */
+  .rhap_volume-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .rhap_volume-controls button:last-child {
+    display: none; /* This hides the dot/button on the right */
+  }
+  
+  /* Responsive design adjustments */
+  @media (max-width: 768px) {
+    .audio-player-container {
+      width: 100vw;
+      justify-content: center;
+      padding: 20px 10px;
+    }
+  
+    .audio-player-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .rhap_container {
+      width: 100% !important;
+      padding: 0 10px;
+    }
+  
+    .rhap_main-controls {
+      display: flex;
+      justify-content: center !important;
+      align-items: center;
+      margin: 0 !important;
+    }
+  
+    .rhap_progress-bar {
+      margin-top: 10px;
+      width: 100% !important;
+    }
+  }
+  
